@@ -1,0 +1,14 @@
+.navbar {
+  justify-content: center;
+  transform: translateY(30px) ;
+  div {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+}
