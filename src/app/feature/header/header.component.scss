@@ -173,9 +173,11 @@
 
 @media screen and (max-width: 480px) {
   .header {
+
     padding-right: 25px;
     padding-left: 25px;
     .header-content {
+      line-height: 1.5;
       .seedtitle {
       font-size: 80px;
     }
@@ -184,7 +186,13 @@
       }
     }
     img{
+      margin: 0px;
       max-width: 250px;
+
+    }
+
+    .button{
+      margin-bottom: 190px;
     }
   }
 }
