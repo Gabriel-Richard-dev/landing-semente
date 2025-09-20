@@ -1,0 +1,190 @@
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.616)),
+    url(../../../../../lading-semente/public/imgs/fotogeral.jpg);
+  object-fit: contain;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 50px 50px;
+
+  .header-content {
+    width: 100%;
+    height: 110vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: 1;
+    text-align: center;
+    border-radius: 50%;
+
+    img {
+      -webkit-user-drag: none;
+      max-width: 300px;
+      animation: scale-up-hor-center 5s forwards;
+    }
+
+    .seedtitle {
+      font-weight: 1000;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      font-size: 9rem;
+      color: transparent;
+      text-transform: uppercase;
+    }
+    .seedtitle span:nth-child(1) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #ffffff;
+      transform: translateY(0.5%);
+      transition: 0.5s;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+      overflow: hidden;
+    }
+    .seedtitle:hover span:nth-child(1) {
+      transform: translateY(-18px);
+    }
+    .seedtitle span:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #ffffff;
+      transition: 0.5s;
+      clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+      overflow: hidden;
+    }
+    .seedtitle:hover span:nth-child(2) {
+      transform: translateY(18px);
+    }
+    .seedtitle span:nth-child(3) {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) scaleY(0);
+      width: 98%;
+      color: #000;
+      background: rgb(187, 91, 27);
+      font-size: 0.25em;
+      font-weight: 500;
+      letter-spacing: 0.7em;
+      text-align: center;
+      padding-left: 20px;
+      margin-left: 5px;
+      transition: 0.5s;
+    }
+    .seedtitle:hover span:nth-child(3) {
+      transform: translateY(-50%) scaleY(1);
+    }
+
+    .subtitle {
+      line-height: 1;
+      color: white;
+      font-weight: 100;
+      text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.918);
+    }
+  }
+}
+
+.button {
+  text-decoration: none;
+  color: rgb(32, 32, 32);
+  display: block;
+  margin-top: 60px;
+  justify-self: center;
+  background-color: white;
+  border: none;
+  padding: 20px 30px;
+  font-weight: 600;
+  border-radius: 40px;
+  transition: 1s;
+  margin-bottom: 60px;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 3px 4px white;
+  color: white;
+  background-color: rgb(187, 91, 27);
+}
+
+.scale-up-hor-center {
+  -webkit-animation: scale-up-hor-center 1s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-hor-center 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+  @-webkit-keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0.4);
+      transform: scaleX(0.4);
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+  @keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0.4);
+      transform: scaleX(0.4);
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 8px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    .header-content {
+       .seedtitle {
+      font-size: 100px;
+    }
+    }
+
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding-right: 25px;
+    padding-left: 25px;
+    .header-content {
+      .seedtitle {
+      font-size: 80px;
+    }
+      .subtitle {
+        font-size: 13px;
+      }
+    }
+    img{
+      max-width: 250px;
+    }
+  }
+}

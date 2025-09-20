@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div>
+        <span class="title">Quem</span>
+        <span class="title">Somos<span class="what">?</span></span>
+        <div class="splitter"></div>
+        <p-accordion value="0">
+          <p-accordion-panel value="0">
+            <p-accordion-header>Movimento de Jovens</p-accordion-header>
+            <p-accordion-content>
+              <p class="m-0">
+                Somos um <span class="bold-paragraph">movimento</span> de jovens
+                dedicados à evangelização, comprometidos em atrair outros jovens
+                para o caminho espiritual, com o objetivo de levar mais almas a
+                <span class="bold-paragraph">Cristo</span>.
+              </p>
+            </p-accordion-content>
+          </p-accordion-panel>
+
+          <p-accordion-panel value="1">
+            <p-accordion-header>Católico</p-accordion-header>
+            <p-accordion-content>
+              <p class="m-0">
+                Seguimos a doutrina e os preceitos da
+                <span class="bold-paragraph">Santa Igreja</span> milenar,
+                católica e apostólica. Buscando também inserir os jovens no
+                contexto do corpo espiritual de Cristo.
+              </p>
+            </p-accordion-content>
+          </p-accordion-panel>
+
+          <p-accordion-panel value="2">
+            <p-accordion-header>Semente</p-accordion-header>
+            <p-accordion-content>
+              <p class="m-0">
+                <span class="bold-paragraph">Semenando</span> um futuro melhor para essa geração, edificado em Cristo Jesus e rumo ao seu reino celeste. Que todas essas <span class="bold-paragraph">sementes</span> brotem e se tornem fruto de esperança e <span class="bold-paragraph">santidade</span>.
+              </p>
+            </p-accordion-content>
+          </p-accordion-panel>
+        </p-accordion>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="carrousel">
+        <p-galleria
+          [value]="images"
+          [numVisible]="5"
+          [circular]="true"
+          [autoPlay]="true"
+          [showItemNavigators]="true"
+          [showThumbnails]="false"
+          [containerStyle]="{ 'max-width': '640px' }"
+        >
+          <ng-template #item let-item>
+            <img
+              [src]="item.itemImageSrc"
+              style="width: 100%; display: block"
+            />
+          </ng-template>
+        </p-galleria>
+      </div>
+    </div>
+  </div>
+</div>
