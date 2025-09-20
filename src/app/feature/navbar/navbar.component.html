@@ -1,5 +1,5 @@
 <div class="navbar-seed" [ngClass]="{'moving': movingSide}">
-<p-toolbar class="nav-seed" [style]="getEstilo()" [ngClass]="{'moving': movingSide}">
+<p-toolbar class="nav-seed" [style]="getEstilo()" [ngClass]="{'moving': movingSide, 'glass': !movingSide}">
     <ng-template #start>
         <div class="flex items-center gap-2">
 
@@ -8,9 +8,9 @@
         </div>
         <div class="links">
               <a href="#main">Quem somos</a>
-              <a href="#main">Veneração</a>
-              <a href="#main">Loja</a>
-              <a href="#main">Encontre-nos</a>
+              <a href="#veneration">Veneração</a>
+              <a href="#shopp">Loja</a>
+              <a href="#where">Encontre-nos</a>
         </div>
     </ng-template>
 </p-toolbar>

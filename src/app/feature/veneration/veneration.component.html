@@ -1,0 +1,112 @@
+<div style="padding-top: 100px;"></div>
+
+<div class="container ">
+  <div class="d-flex title-content mb-3">
+    <span
+      class="material-icons text-center d-block icon"
+      style="color: rgb(153, 94, 6); font-size: 80px"
+      >favorite</span
+    >
+    <h1 class="d-block text-end title">Venerações</h1>
+  </div>
+
+  <div class="d-flex justify-content-center mb-5">
+    <p-button
+      (click)="showDialog()"
+      label="Entender melhor veneração"
+      [rounded]="true"
+      severity="secondary"
+      iconPos="right"
+      icon="pi pi-search"
+    />
+  </div>
+
+  <div class="d-flex gap-5 flex content-veneration">
+    <p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+      <ng-template #header>
+        <div class="imagem img-ns"></div>
+      </ng-template>
+      <ng-template #title> Nossa Senhora de Fátima </ng-template>
+      <ng-template #subtitle> Mãe do Céu </ng-template>
+      <p>
+        Nossa Senhora de Fátima apareceu a três crianças em Portugal, em 1917,
+        pedindo oração pela paz, conversão e reparação dos pecados. As aparições
+        culminaram no Milagre do Sol, presenciado por milhares. Reconhecida pela
+        Igreja em 1930, tornou-se símbolo de fé e devoção, inspirando milhões de
+        fiéis no mundo todo.
+      </p>
+    </p-card>
+    <p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+      <ng-template #header>
+        <div class="imagem img-c"></div>
+      </ng-template>
+      <ng-template #title> São Carlo Acutis </ng-template>
+      <ng-template #subtitle> Baluarte do movimento </ng-template>
+      <p>
+        Carlo Acutis, jovem italiano, dedicou sua vida à fé e à caridade, usando
+        a informática para divulgar milagres eucarísticos. Faleceu aos 15 anos,
+        em 2006, e foi beatificado em 2020. Seu exemplo de devoção, simplicidade
+        e serviço inspira jovens e adultos a viverem o Evangelho com alegria e
+        generosidade.
+      </p>
+    </p-card>
+    <p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+      <ng-template #header>
+        <div class="imagem img-t"></div>
+      </ng-template>
+      <ng-template #title> São Tarcísio </ng-template>
+      <ng-template #subtitle> Padroeiro dos Coroinhas </ng-template>
+      <p>
+        Tarcísio, jovem acólito romano, foi escolhido para levar a Eucaristia
+        aos cristãos presos durante perseguições. Ao ser abordado por pagãos,
+        recusou entregar as hóstias e foi morto por sua fé. Seu testemunho de
+        coragem e amor à Eucaristia tornou-se exemplo de dedicação e santidade
+        para toda a Igreja.
+      </p>
+    </p-card>
+  </div>
+</div>
+
+<p-dialog
+  header="Veneração"
+  [modal]="true"
+  [(visible)]="visible"
+  [style]="{ width: '50rem' }"
+  [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+>
+  <p class="mb-8">
+    Na Igreja Católica, a veneração é um ato de respeito e devoção prestado aos
+    santos, anjos e relíquias sagradas. A prática da veneração tem raízes na
+    tradição da Igreja e é considerada uma forma de honrar aqueles que foram
+    exemplos de fé e virtude.
+  </p>
+  <p class="mb-8">
+    A veneração na Igreja Católica não deve ser confundida com adoração, que é
+    reservada exclusivamente a Deus. Os católicos acreditam que a veneração aos
+    santos e anjos é uma forma de se conectar com o divino e de buscar sua
+    intercessão em favor dos fiéis.
+  </p>
+  <p class="mb-8">
+    Os católicos costumam venerar os santos através de orações, novenas,
+    peregrinações a locais de devoção e pela exposição de imagens e relíquias
+    sagradas. A veneração também pode incluir o uso de objetos abençoados, como
+    medalhas e escapulários.
+  </p>
+  <p class="mb-8 mb-5">
+    A veneração na Igreja Católica é uma prática comum em todo o mundo e faz
+    parte da rica tradição da fé católica. Os católicos acreditam que a
+    veneração aos santos e anjos fortalece sua própria fé e os ajuda a crescer
+    espiritualmente. A veneração na Igreja Católica é baseada na crença de que
+    os santos e anjos estão presentes na vida dos fiéis e intercedem por eles
+    diante de Deus. Os católicos acreditam que a veneração aos santos é uma
+    forma de se aproximar do divino e de receber graças e bênçãos.
+  </p>
+
+  <span>Fonte:</span>
+  <a
+    href="https://www.livrodoceu.com.br/glossario/o-que-e-veneracao-na-igreja-catolica/"
+    target="_blank"
+  >
+    Clique para ver completa</a
+  >
+</p-dialog>

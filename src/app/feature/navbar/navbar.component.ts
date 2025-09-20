@@ -4,6 +4,7 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { AvatarModule } from 'primeng/avatar';
 import { ButtonModule } from 'primeng/button';
 
+const colorbase = 'rgba(255, 255, 255, 0.08)';
 @Component({
   selector: 'app-nav',
   standalone: true,
@@ -12,12 +13,15 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  background: string = 'transparent';
+
+
+  background: string = colorbase;
   movingSide: boolean = false;
   radions: string = '3rem'
 
   getEstilo(): any {
     return {
+      'border': 'none',
       'border-radius': this.radions,
       padding: '1rem 1rem 1rem 1.5rem',
       'background-color': `${this.background}`,
@@ -35,6 +39,6 @@ export class NavbarComponent {
     }
     this.radions = '3rem';
     this.movingSide = false;
-    this.background = 'transparent';
+    this.background = colorbase;
   }
 }

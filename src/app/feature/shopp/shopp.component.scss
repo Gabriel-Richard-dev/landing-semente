@@ -1,0 +1,26 @@
+
+.products-container {
+  overflow: scroll;
+
+}
+
+.card {
+  text-align: center;
+  border-radius: 15px;
+  max-width: 400px;
+  height: 600px;
+  padding: 20px;
+  img {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    object-fit: cover;
+    max-width: auto;
+    height: 400px;
+  }
+}
+
+
+.produtos {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

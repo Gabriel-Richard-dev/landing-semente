@@ -166,38 +166,36 @@
   .header {
     border-radius: 0px 0px 20px 20px;
     .header-content {
-       .seedtitle {
-      font-size: 100px;
+      .seedtitle {
+        font-size: 100px;
+      }
     }
-    }
-
-
   }
 }
 
 @media screen and (max-width: 480px) {
   .header {
-
     padding-right: 25px;
     padding-left: 25px;
     border-radius: 0px 0px 20px 20px;
-
+    .title {
+      padding: 0px;
+    }
     .header-content {
       line-height: 1.5;
       .seedtitle {
-      font-size: 80px;
-    }
+        font-size: 80px;
+      }
       .subtitle {
         font-size: 13px;
       }
     }
-    img{
+    img {
       margin: 0px;
       max-width: 250px;
-
     }
 
-    .button{
+    .button {
       margin-bottom: 190px;
     }
   }

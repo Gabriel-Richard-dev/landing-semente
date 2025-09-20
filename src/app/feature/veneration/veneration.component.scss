@@ -1,0 +1,71 @@
+.title {
+  font-size: 100px;
+  font-weight: 500;
+}
+
+.title-content {
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  align-self: center;
+}
+
+.p-ripple .p-button .p-component {
+  width: 400px !important;
+}
+
+.imagem {
+  width: 400px;
+  height: 470px;
+  background: red;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1400px) {
+  .title {
+      font-size: 40px;
+    }
+
+  .content-veneration{
+    justify-self: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  p-card{
+    display: flex;
+    justify-self: center;
+    margin: 0 auto;
+    max-width: 20rem,;
+  }
+
+}
+@media screen and (max-width: 460px) {
+  .content-veneration{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .imagem {
+    max-width: 340px;
+  }
+  .icon {
+    display: none;
+  }
+}
+
+.img-ns {
+    background-image: url('https://consagradosdefatima.org/wp-content/uploads/2024/05/NossaSenhoradeFatima-ArautosdoEvangelho1.jpeg');
+}
+
+.img-c {
+  background-image: url('https://diocesedecampos.org.br/wp-content/uploads/2020/10/foto-1.jpg');
+}
+
+.img-t {
+  background-image: url('https://cdn.conventodapenha.org.br/wp-content/uploads/2019/08/04110951/s%C3%A3o-tarc%C3%ADsio.jpg');
+}
