@@ -4,6 +4,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeuix/themes/aura';
 
+
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -21,3 +22,4 @@ export const appConfig: ApplicationConfig = {
     }),
   ],
 };
+
