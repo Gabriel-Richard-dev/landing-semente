@@ -29,7 +29,6 @@ export class NavbarComponent {
   onScroll() {
     if (window.pageYOffset != 0) {
       this.movingSide = true;
-      console.log('open');
       this.background = 'white';
       this.radions = '0';
       return;
@@ -37,6 +36,5 @@ export class NavbarComponent {
     this.radions = '3rem';
     this.movingSide = false;
     this.background = 'transparent';
-    console.log('close');
   }
 }

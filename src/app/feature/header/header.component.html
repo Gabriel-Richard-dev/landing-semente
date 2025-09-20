@@ -5,8 +5,8 @@
         <img src="/imgs/logosemente.png" alt="" />
       </div>
 
-      <div>
-        <div class="seedtitle">
+      <div class="title" (mouseover)="openTitle()" (mouseleave)="disableTitle()">
+        <div class="seedtitle" [ngClass]="{ 'seedtitle-active': active }">
           SEMENTE
           <span>SEMENTE</span>
           <span>SEMENTE</span>

@@ -47,7 +47,7 @@
       clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
       overflow: hidden;
     }
-    .seedtitle:hover span:nth-child(1) {
+    .seedtitle-active span:nth-child(1) {
       transform: translateY(-18px);
     }
     .seedtitle span:nth-child(2) {
@@ -59,7 +59,7 @@
       clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
       overflow: hidden;
     }
-    .seedtitle:hover span:nth-child(2) {
+    .seedtitle-active span:nth-child(2) {
       transform: translateY(18px);
     }
     .seedtitle span:nth-child(3) {
@@ -78,7 +78,7 @@
       margin-left: 5px;
       transition: 0.5s;
     }
-    .seedtitle:hover span:nth-child(3) {
+    .seedtitle-active span:nth-child(3) {
       transform: translateY(-50%) scaleY(1);
     }
 
@@ -89,6 +89,10 @@
       text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.918);
     }
   }
+}
+
+.title {
+  padding: 10px 10px;
 }
 
 .button {
