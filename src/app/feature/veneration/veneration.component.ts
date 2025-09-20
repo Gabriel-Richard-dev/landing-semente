@@ -5,7 +5,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { DialogModule } from 'primeng/dialog';
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
 
-const animation = { duration: 50000, easing: (t:any) => t }
+const animation = { duration: 50000, easing: (t: any) => t };
 
 @Component({
   selector: 'app-veneration',
@@ -39,6 +39,10 @@ export class VenerationComponent {
     });
   }
 
+  ngOnDestroy() {
+    this.slider?.destroy();
+  }
+
   showDialog() {
     this.visible = true;
   }
@@ -46,12 +50,30 @@ export class VenerationComponent {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.slider?.destroy();
-    if(window.innerWidth < 990){
-      this.slider =  new KeenSlider(this.sliderRef.nativeElement, {
+    if (window.innerWidth < 990) {
+      this.slider = new KeenSlider(this.sliderRef.nativeElement, {
+        mode: 'free-snap',
+        loop: true,
+        slides: {
+          perView: 1,
+        },
+        created(s) {
+          s.moveToIdx(5, true, animation);
+        },
+        updated(s) {
+          s.moveToIdx(s.track.details.abs + 5, true, animation);
+        },
+        animationEnded(s) {
+          s.moveToIdx(s.track.details.abs + 5, true, animation);
+        },
+      });
+      return;
+    }
+    this.slider = new KeenSlider(this.sliderRef.nativeElement, {
       mode: 'free-snap',
       loop: true,
       slides: {
-        perView: 1,
+        perView: this.perView,
       },
       created(s) {
         s.moveToIdx(5, true, animation);
@@ -63,23 +85,5 @@ export class VenerationComponent {
         s.moveToIdx(s.track.details.abs + 5, true, animation);
       },
     });
-    return;
-    }
-     this.slider = new KeenSlider(this.sliderRef.nativeElement, {
-       mode: 'free-snap',
-       loop: true,
-       slides: {
-         perView: this.perView,
-       },
-       created(s) {
-         s.moveToIdx(5, true, animation);
-       },
-       updated(s) {
-         s.moveToIdx(s.track.details.abs + 5, true, animation);
-       },
-       animationEnded(s) {
-         s.moveToIdx(s.track.details.abs + 5, true, animation);
-       },
-     });
   }
 }
