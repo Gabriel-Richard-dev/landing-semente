@@ -1,15 +1,54 @@
-.nav {
-  margin: 0px;
-  justify-content: center;
-  transform: translateY(30px) ;
-  div {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-  }
+.nav-seed {
+  transition: .5s ease-in-out;
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  z-index: 999;
+  width: 660px;
+}
 
+.image {
+  transition: .5s ease-in-out;
+  width: 40px;
+  height: 40px;
+  background-image: url('/imgs/logosemente.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.links {
+  transition: .5s ease-in;
+  display: flex;
+  margin-left: 30px;
+  gap: 20px;
   a {
-    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 120px;
+    padding: 3px 10px;
     text-decoration: none;
+    color: white;
+  }
+}
+
+
+.moving {
+  .image {
+   background-image: url('/imgs/logosemente-black.png');
+  }
+  .links a {
+    color: rgb(43, 43, 43);
+  }
+}
+
+.moving > .nav-seed {
+  box-shadow: 1px 0px 30px 0px black;
+  top: 0px;
+  width: 100%;
+}
+
+@media screen and (max-width: 650px) {
+  .nav-seed {
+    display: none;
   }
 }

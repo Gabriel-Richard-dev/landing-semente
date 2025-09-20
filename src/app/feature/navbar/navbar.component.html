@@ -1,5 +1,17 @@
- <nav class="nav">
-  <div>
-     <a href="">Quem somos</a><a href="">Carisma</a><a href="">Contato</a>
-  </div>
-</nav>
+<div class="navbar-seed" [ngClass]="{'moving': movingSide}">
+<p-toolbar class="nav-seed" [style]="getEstilo()" [ngClass]="{'moving': movingSide}">
+    <ng-template #start>
+        <div class="flex items-center gap-2">
+
+          <a href="#"><div class="image"></div></a>
+
+        </div>
+        <div class="links">
+              <a href="#main">Quem somos</a>
+              <a href="#main">Veneração</a>
+              <a href="#main">Loja</a>
+              <a href="#main">Encontre-nos</a>
+        </div>
+    </ng-template>
+</p-toolbar>
+</div>

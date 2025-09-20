@@ -1,12 +1,42 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
+import { ToolbarModule } from 'primeng/toolbar';
+import { AvatarModule } from 'primeng/avatar';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, AvatarModule, ToolbarModule, ButtonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  background: string = 'transparent';
+  movingSide: boolean = false;
+  radions: string = '3rem'
 
+  getEstilo(): any {
+    return {
+      'border-radius': this.radions,
+      padding: '1rem 1rem 1rem 1.5rem',
+      'background-color': `${this.background}`,
+      'transition': '.3s ease-in'
+    };
+  }
+
+  @HostListener('window:scroll')
+  onScroll() {
+    if (window.pageYOffset != 0) {
+      this.movingSide = true;
+      console.log('open');
+      this.background = 'white';
+      this.radions = '0';
+      return;
+    }
+    this.radions = '3rem';
+    this.movingSide = false;
+    this.background = 'transparent';
+    console.log('close');
+  }
 }
