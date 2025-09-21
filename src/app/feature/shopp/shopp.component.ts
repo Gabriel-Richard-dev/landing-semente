@@ -18,35 +18,37 @@ export interface Product {
   inventoryStatus: string;
   severity?: string;
 }
-
 const products: Product[] = [
+  {
+    name: 'Blusa baluarte',
+    image: '/imgs/shopp/baluarte.png',
+    description:
+      'Blusa inspirada em São Carlo Acutis, jovem beato conhecido por sua devoção à Eucaristia e à tecnologia. Feita com materiais ecológicos, une fé e sustentabilidade para o seu dia a dia.',
+    rating: 4.5,
+    price: 50,
+    type: 'Blusa',
+    inventoryStatus: 'INSTOCK',
+    severity: 'success',
+  },
   {
     name: 'EcoCarlo',
     image: '/imgs/shopp/ecocarlo.png',
-    description: 'Ecobag inspirada em São Carlo Acutis, feita com materiais ecológicos e resistentes. Ideal para o dia a dia, compras e atividades diversas, promovendo sustentabilidade e devoção.',
+    description:
+      'Ecobag inspirada em São Carlo Acutis, símbolo de juventude, fé e inovação. Produzida com materiais ecológicos, perfeita para quem busca praticidade e espiritualidade.',
     rating: 4.5,
     price: 25,
-    type: "ecobag",
+    type: 'Ecobag',
     inventoryStatus: 'INSTOCK',
     severity: 'success',
   },
   {
-    name: 'EcoCarlo2',
-    image: '/imgs/shopp/ecocarlo.png',
-    description: 'Ecobag inspirada em São Carlo Acutis, feita com materiais ecológicos e resistentes. Ideal para o dia a dia, compras e atividades diversas, promovendo sustentabilidade e devoção.',
+    name: 'EcoJoana',
+    image: '/imgs/shopp/ecojoana.png',
+    description:
+      'Ecobag inspirada em Santa Joana d’Arc, mártir e heroína francesa que foi queimada por sua fé. Feita com materiais sustentáveis, representa coragem e determinação no cotidiano.',
     rating: 4.5,
     price: 25,
-    type: "ecobag",
-    inventoryStatus: 'INSTOCK',
-    severity: 'success',
-  },
-  {
-    name: 'EcoCarlo3',
-    image: '/imgs/shopp/ecocarlo.png',
-    description: 'Ecobag inspirada em São Carlo Acutis, feita com materiais ecológicos e resistentes. Ideal para o dia a dia, compras e atividades diversas, promovendo sustentabilidade e devoção.',
-    rating: 4.5,
-    price: 25,
-    type: "ecobag",
+    type: 'Ecobag',
     inventoryStatus: 'INSTOCK',
     severity: 'success',
   },
@@ -64,7 +66,7 @@ const products: Product[] = [
     FormsModule,
     ButtonModule,
     CarouselModule,
-    DialogModule
+    DialogModule,
   ],
   templateUrl: './shopp.component.html',
   styleUrl: './shopp.component.scss',
@@ -81,7 +83,7 @@ export class ShoppComponent {
     return product.severity;
   }
 
-  showDialog(produto:Product){
+  showDialog(produto: Product) {
     this.modalcontent = produto;
     this.visible = true;
   }

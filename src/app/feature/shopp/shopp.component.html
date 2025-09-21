@@ -13,7 +13,7 @@
   <div class="row row-gap-5">
     <div class="produto col-sm-4" *ngFor="let produto of products()">
       <div class="content" (click)="showDialog(produto)">
-        <img src="/imgs/shopp/ecocarlo.png" alt="" />
+        <img src="{{produto.image}}" alt="" />
         <h4 class="mt-3">{{ produto.name }}</h4>
         <p>{{ [produto.type] }}</p>
         <h3>R$ {{ produto.price }},00</h3>
