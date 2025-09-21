@@ -6,10 +6,12 @@ import { CommonModule, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
+import { Dialog, DialogModule } from 'primeng/dialog';
 
 export interface Product {
   name: string;
   image: string;
+  type: string;
   description: string;
   rating: number;
   price: number;
@@ -17,45 +19,38 @@ export interface Product {
   severity?: string;
 }
 
-const products: any[] = [
+const products: Product[] = [
   {
     name: 'EcoCarlo',
-    image: '/imgs/ecocarlo.png',
-    description: 'Automóvel',
+    image: '/imgs/shopp/ecocarlo.png',
+    description: 'Ecobag inspirada em São Carlo Acutis, feita com materiais ecológicos e resistentes. Ideal para o dia a dia, compras e atividades diversas, promovendo sustentabilidade e devoção.',
     rating: 4.5,
-    price: 12000,
+    price: 25,
+    type: "ecobag",
     inventoryStatus: 'INSTOCK',
     severity: 'success',
   },
   {
     name: 'EcoCarlo2',
-    image: '/imgs/ecocarlo.png',
-    description: 'Automóvel',
+    image: '/imgs/shopp/ecocarlo.png',
+    description: 'Ecobag inspirada em São Carlo Acutis, feita com materiais ecológicos e resistentes. Ideal para o dia a dia, compras e atividades diversas, promovendo sustentabilidade e devoção.',
     rating: 4.5,
-    price: 12000,
+    price: 25,
+    type: "ecobag",
     inventoryStatus: 'INSTOCK',
     severity: 'success',
   },
   {
     name: 'EcoCarlo3',
-    image: '/imgs/ecocarlo.png',
-    description: 'Automóvel',
+    image: '/imgs/shopp/ecocarlo.png',
+    description: 'Ecobag inspirada em São Carlo Acutis, feita com materiais ecológicos e resistentes. Ideal para o dia a dia, compras e atividades diversas, promovendo sustentabilidade e devoção.',
     rating: 4.5,
-    price: 12000,
-    inventoryStatus: 'INSTOCK',
-    severity: 'success',
-  },
-  {
-    name: 'EcoCarlo5',
-    image: '/imgs/ecocarlo.png',
-    description: 'Automóvel',
-    rating: 4.5,
-    price: 12000,
+    price: 25,
+    type: "ecobag",
     inventoryStatus: 'INSTOCK',
     severity: 'success',
   },
 ];
-
 
 @Component({
   selector: 'app-shopp',
@@ -69,12 +64,14 @@ const products: any[] = [
     FormsModule,
     ButtonModule,
     CarouselModule,
+    DialogModule
   ],
   templateUrl: './shopp.component.html',
   styleUrl: './shopp.component.scss',
 })
 export class ShoppComponent {
-  layout: 'list' | 'grid' = 'grid';
+  visible = false;
+  modalcontent: Product = Array.from(products)[0];
 
   products(): any[] {
     return products;
@@ -82,5 +79,10 @@ export class ShoppComponent {
 
   getSeverity(product: any): any {
     return product.severity;
+  }
+
+  showDialog(produto:Product){
+    this.modalcontent = produto;
+    this.visible = true;
   }
 }

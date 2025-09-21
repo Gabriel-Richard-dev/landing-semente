@@ -7,7 +7,8 @@ import { MenuItem } from 'primeng/api';
 import { VenerationComponent } from '../veneration/veneration.component';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { ShoppComponent } from '../shopp/shopp.component';
-
+import { FindusComponent } from '../findus/findus.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-landing',
@@ -19,7 +20,9 @@ import { ShoppComponent } from '../shopp/shopp.component';
     NavbarComponent,
     VenerationComponent,
     AnimateOnScrollModule,
-    ShoppComponent
+    ShoppComponent,
+    FindusComponent,
+    FooterComponent
   ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss',

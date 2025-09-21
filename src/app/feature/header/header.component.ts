@@ -15,7 +15,7 @@ export class HeaderComponent {
   ngOnInit(){
     setTimeout(() => {
       this.active = false
-    }, 700);
+    }, 1500);
   }
 
   openTitle(){

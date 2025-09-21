@@ -5,7 +5,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { DialogModule } from 'primeng/dialog';
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
 
-const animation = { duration: 50000, easing: (t: any) => t };
+const animation = { duration: 40000, easing: (t: any) => t };
 
 @Component({
   selector: 'app-veneration',
