@@ -24,6 +24,7 @@ export class VenerationComponent {
     this.slider = new KeenSlider(this.sliderRef.nativeElement, {
       mode: 'free-snap',
       loop: true,
+      drag: false,
       slides: {
         perView: this.perView,
       },
