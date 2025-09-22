@@ -9,6 +9,11 @@
   font-weight: 1000;
 }
 
+keen-slider {
+    touch-action: none; 
+  pointer-events: none;
+}
+
 .card {
   width: 300px;
   height: 390px;
