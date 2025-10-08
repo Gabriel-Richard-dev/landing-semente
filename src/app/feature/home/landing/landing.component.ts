@@ -4,10 +4,8 @@ import { MenuItem } from 'primeng/api';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from '../../footer/footer.component';
-import { NavbarComponent } from '../../navbar/navbar.component';
 import { FindusComponent } from './components/findus/findus.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ShoppComponent } from './components/shopp/shopp.component';
 import { VenerationComponent } from './components/veneration/veneration.component';
 
 @Component({
@@ -17,10 +15,8 @@ import { VenerationComponent } from './components/veneration/veneration.componen
     MenubarModule,
     MainComponent,
     HeaderComponent,
-    NavbarComponent,
     VenerationComponent,
     AnimateOnScrollModule,
-    ShoppComponent,
     FindusComponent,
     FooterComponent
   ],

@@ -3,6 +3,7 @@ import { Component, HostListener } from '@angular/core';
 import { ToolbarModule } from 'primeng/toolbar';
 import { AvatarModule } from 'primeng/avatar';
 import { ButtonModule } from 'primeng/button';
+import { ActivatedRoute } from '@angular/router';
 
 const colorbase = 'rgba(255, 255, 255, 0.08)';
 @Component({
@@ -19,7 +20,12 @@ export class NavbarComponent {
   movingSide: boolean = false;
   radions: string = '3rem'
 
+  constructor(private activatedRoute: ActivatedRoute){
+  }
+
   getEstilo(): any {
+
+
     return {
       'border': 'none',
       'border-radius': this.radions,
@@ -41,4 +47,6 @@ export class NavbarComponent {
     this.movingSide = false;
     this.background = colorbase;
   }
+
+
 }
