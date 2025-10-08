@@ -1,14 +1,14 @@
-import { Component, HostListener } from '@angular/core';
-import { NavbarComponent } from "../navbar/navbar.component";
-import { HeaderComponent } from '../header/header.component';
-import { MainComponent } from '../main/main.component';
+import { Component } from '@angular/core';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
-import { VenerationComponent } from '../veneration/veneration.component';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
-import { ShoppComponent } from '../shopp/shopp.component';
-import { FindusComponent } from '../findus/findus.component';
-import { FooterComponent } from '../footer/footer.component';
+import { MainComponent } from './components/main/main.component';
+import { FooterComponent } from '../../footer/footer.component';
+import { NavbarComponent } from '../../navbar/navbar.component';
+import { FindusComponent } from './components/findus/findus.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ShoppComponent } from './components/shopp/shopp.component';
+import { VenerationComponent } from './components/veneration/veneration.component';
 
 @Component({
   selector: 'app-landing',

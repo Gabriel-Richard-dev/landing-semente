@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { LandingComponent } from './feature/landing/landing.component';
+import { LandingComponent } from './feature/home/landing/landing.component';
 
 export const routes: Routes = [
   { path: '', component: LandingComponent }
